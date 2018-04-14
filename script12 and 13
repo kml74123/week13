@@ -1,0 +1,13 @@
+#!bin/bash
+
+echo 'make dir'
+
+mkdir file1 file2
+rsync file1 file2
+rsync -a --delete file1
+rsync -a file1
+
+echo 'make user'
+useradd -e /usr/sbin/user $5
+echo 'make password'
+passwd $5
