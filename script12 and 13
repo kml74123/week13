@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 echo 'make dir'
 
@@ -11,3 +11,9 @@ echo 'make user'
 useradd -e /usr/sbin/user $5
 echo 'make password'
 passwd $5
+
+echo 'delete file1 file2'
+rmdir file1 file2
+
+echo 'check if it gone'
+ls -l
